@@ -1,0 +1,26 @@
+@mixin operator-chats-table-row {
+  display: grid;
+  grid-template-columns: 48px 280fr 280fr 180px 180px 180fr 164px;
+}
+
+.header {
+  @include operator-chats-table-row;
+  @include compact-table-header-row;
+}
+
+.headerCell {
+  @include table-header-cell;
+}
+
+.row {
+  @include operator-chats-table-row;
+  @include compact-table-row;
+}
+
+.rowCell {
+  @include table-cell;
+  @include text-size-body-2;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}

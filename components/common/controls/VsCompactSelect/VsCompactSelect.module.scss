@@ -1,0 +1,24 @@
+.root {
+  @include text-size-body-2;
+  border: 1px solid var(--color-border-accent);
+  background-color: var(--color-bg-primary);
+  padding: 3px 31px 3px 7px;
+  color: var(--color-accent);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%236D717F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: right center;
+  background-repeat: no-repeat;
+  outline: none;
+  border-radius: 2px;
+
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:focus {
+    border-color: var(--color-accent);
+  }
+}

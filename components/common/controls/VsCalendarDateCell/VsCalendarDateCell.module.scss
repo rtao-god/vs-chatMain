@@ -1,0 +1,86 @@
+.dateCell {
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  padding: 3.5px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  user-select: none;
+  border-radius: 50%;
+  position: relative;
+  color: var(--color-text-primary);
+  @include text-size-body-2;
+  font-weight: 600;
+
+  &:hover {
+    background-color: var(--color-bg-accent-secondary);
+  }
+
+  &.dateCellSelected {
+    color: var(--color-text-contrast);
+    background-color: var(--color-accent);
+    z-index: 1;
+  }
+
+  &.dateCellInRange::after,
+  &.dateCellFirstDayOfMonth::after,
+  &.dateCellLastDayOfMonth::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: -100%;
+    background-color: var(--color-bg-accent-secondary);
+    z-index: -1;
+  }
+
+  &.dateCellActive {
+    cursor: pointer;
+  }
+
+  &.dateCellFuture {
+    color: var(--color-bg-control-inactive);
+    pointer-events: none;
+  }
+
+  &.dateCellFirstDayOfMonth,
+  &.dateCellLastDayOfMonth {
+    overflow: visible;
+    border-radius: 0%;
+
+    &:hover {
+      background-color: var(--color-bg-accent-secondary);
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+    }
+  }
+
+  &.dateCellFirstDayOfMonth {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDQiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCA0NCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxyZWN0IHdpZHRoPSI0NCIgaGVpZ2h0PSIzMCIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyXzE1NV8yMDEyKSIgLz4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhcl8xNTVfMjAxMiIgeDE9IjE3LjUiIHkxPSIxNSIgeDI9IjQiIHkyPSIxNSIKICAgICAgICAgICAgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjRUJGMEY3IiAvPgogICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNFQkYwRjciIHN0b3Atb3BhY2l0eT0iMCIgLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgo8L3N2Zz4=');
+
+    &::after {
+      left: 98%;
+    }
+  }
+
+  &.dateCellLastDayOfMonth {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDQiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCA0NCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQ0IiBoZWlnaHQ9IjMwIiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXJfMTYyXzE0MTYpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXJfMTYyXzE0MTYiIHgxPSIyMiIgeTE9IjE1IiB4Mj0iMzcuNSIgeTI9IjE1IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiNFQkYwRjciLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRUJGMEY3IiBzdG9wLW9wYWNpdHk9IjAiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4=');
+    
+    &::before {
+      right: 98%;
+    }
+
+    &:hover {
+      background-color: var(--color-bg-accent-secondary);
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%;
+
+      &::before {
+        right: 50%;
+      }
+    }
+  }
+}

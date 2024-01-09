@@ -1,0 +1,30 @@
+.root {
+  display: flex;
+  width: fit-content;
+}
+
+.rootPrimary {
+  @include button-primary;
+  @include button-medium;
+  text-decoration: none;
+}
+
+.rootSecondary {
+  @include text-size-body-2;
+  color: var(--color-accent);
+  font-weight: 500;
+  text-decoration: none;
+  width: 100%;
+}
+
+.rootUnderline {
+  @include text-size-body-1;
+  color: var(--color-accent);
+  font-weight: 400;
+}
+
+.rootOutline {
+  @include button-outline;
+  @include button-medium;
+  text-decoration: none;
+}

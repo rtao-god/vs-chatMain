@@ -1,0 +1,104 @@
+@mixin button-primary {
+  @include text-size-body-2;
+  border: none;
+  color: var(--color-text-contrast);
+  background-color: var(--color-accent);
+  border: 1px solid transparent;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, border-color 0.2s;
+  cursor: pointer;
+  font-weight: 500;
+  box-sizing: border-box;
+
+  &:hover:not(:disabled) {
+    background-color: var(--color-accent-dark);
+  }
+
+  &:focus:not(:disabled) {
+    border-color: var(--color-accent);
+    background-color: var(--color-accent-dark);
+  }
+
+  &:disabled {
+    background-color: var(--color-bg-control-inactive);
+    cursor: default;
+  }
+}
+
+@mixin button-outline {
+  @include text-size-body-2;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  background-color: var(--color-bg-primary);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, border-color 0.2s;
+  cursor: pointer;
+  font-weight: 500;
+  box-sizing: border-box;
+
+  &:hover:not(:disabled) {
+    background-color: var(--color-accent-dark);
+    color: var(--color-text-contrast);
+    border-color: var(--color-accent-dark);
+  }
+
+  &:focus:not(:disabled) {
+    background-color: var(--color-accent-dark);
+    color: var(--color-text-contrast);
+    border-color: var(--color-accent-dark);
+  }
+
+  &:disabled {
+    border-color: var(--color-bg-control-inactive);
+    cursor: default;
+  }
+}
+
+@mixin button-danger {
+  @include text-size-body-2;
+  border: 2px solid var(--color-border-danger);
+  color: var(--color-text-danger);
+  background-color: var(--color-bg-primary);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, border-color 0.2s;
+  cursor: pointer;
+  font-weight: 500;
+  box-sizing: border-box;
+
+  &:hover:not(:disabled) {
+    background-color: var(--color-bg-danger);
+    color: var(--color-text-danger);
+    border-color: var(--color-border-danger);
+  }
+
+  &:focus:not(:disabled) {
+    background-color: var(--color-bg-danger);
+    color: var(--color-text-danger);
+    border-color: var(--color-border-danger);
+  }
+
+  &:disabled {
+    border-color: var(--color-bg-control-inactive);
+    color: var(--color-text-secondary);
+    cursor: default;
+  }
+}
+
+@mixin button-medium {
+  padding: 4px 16px;
+  height: 44px;
+}
+
+@mixin button-small {
+  padding: 4px 8px;
+  height: 36px;
+}

@@ -1,0 +1,15 @@
+stages:
+  - main
+
+main-job:
+  stage: main
+  tags:
+    - main
+  only:
+    - main
+  script:
+    - echo "deploying admin frontend..."
+    - cd /var/www/admin-chat.vsbrothers.com
+    - echo "pulling the code..."
+    - git pull https://gitlab+deploy-token-3578749:6UhrsVyC8vF1WEYtxySJ@gitlab.com/webandadmg/vs_chat_admin_front
+    - ./restart_docker.sh

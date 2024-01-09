@@ -1,0 +1,15 @@
+.rootPrimary {
+  @include button-primary;
+}
+
+.rootDanger {
+  @include button-danger;
+}
+
+.rootMedium {
+  @include button-medium;
+}
+
+.rootSmall {
+  @include button-small;
+}

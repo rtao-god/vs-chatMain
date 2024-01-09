@@ -1,0 +1,46 @@
+@mixin operator-annual-statistics-table-row {
+  display: grid;
+  grid-template-columns: 200px repeat(12, 1fr);
+}
+
+.header {
+  @include operator-annual-statistics-table-row;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+}
+
+.headerCell {
+  @include table-header-cell;
+  @include text-size-body-2;
+  color: var(--color-text-contrast);
+  font-weight: 600;
+  min-width: 0;
+}
+
+.row {
+  @include operator-annual-statistics-table-row;
+  border-bottom: 1px solid var(--color-border-secondary);
+}
+
+.rowCell {
+  @include table-cell;
+  @include text-size-body-2;
+  box-sizing: border-box;
+  min-height: 68px;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+
+  &:nth-child(even) {
+    background-color: var(--color-bg-accent-secondary);
+  }
+}
+
+.rowCellHeader {
+  background-color: var(--color-bg-accent);
+}
+
+.failureCount {
+  color: var(--color-text-danger);
+}

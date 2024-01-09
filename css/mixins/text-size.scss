@@ -1,0 +1,39 @@
+@mixin text-size-h1 {
+  font-size: 48px;
+  font-style: normal;
+  line-height: 72px;
+}
+
+@mixin text-size-h2 {
+  font-size: 32px;
+  font-style: normal;
+  line-height: 46px;
+}
+
+@mixin text-size-h4 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+@mixin text-size-body-1 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+@mixin text-size-body-2 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+@mixin text-size-body-3 {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}

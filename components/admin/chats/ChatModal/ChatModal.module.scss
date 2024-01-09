@@ -1,0 +1,41 @@
+.root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  z-index: var(--z-index-modal);
+}
+
+.rootHidden {
+  pointer-events: none;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--color-bg-modal-backdrop);
+  transition: opacity 0.4s;
+}
+
+.backdropHidden {
+  opacity: 0;
+}
+
+.chatWrapper {
+  height: 100%;
+  width: 60%;
+  max-width: 600px;
+  background-color: var(--color-bg-accent);
+  transition: transform 0.3s;
+  z-index: 1;
+}
+
+.chatWrapperHidden {
+  transform: translateX(100%);
+}

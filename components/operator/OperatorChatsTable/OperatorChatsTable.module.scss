@@ -1,0 +1,10 @@
+@import './mixins.scss';
+
+.header {
+  @include operator-chats-table-row;
+  margin-bottom: 8px;
+}
+
+.headerCell {
+  @include table-header-cell;
+}

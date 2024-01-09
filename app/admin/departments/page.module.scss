@@ -1,0 +1,19 @@
+.root {
+  @include admin-page-paddings;
+  padding-top: 32px;
+}
+
+.navbar {
+  margin-bottom: 32px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.addLink{
+  text-decoration: none;
+}

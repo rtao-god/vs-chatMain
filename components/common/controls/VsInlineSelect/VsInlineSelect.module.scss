@@ -1,0 +1,37 @@
+.root {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  @include text-size-body-2;
+  color: var(--color-text-secondary);
+  margin-right: 8px;
+}
+
+.select {
+  @include text-size-body-2;
+  color: var(--color-text-primary);
+  border: none;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%236D717F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding-right: 24px;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px 0px var(--color-accent);
+  transition: box-shadow 0.2s;
+
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 2px var(--color-accent);
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "vs_chat_admin_front",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2",
+    "next": "13.5.4",
+    "nextjs-toploader": "^1.5.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "sass": "^1.69.1",
+    "vs_chat_widget_front": "git+https://webandadmg:glpat-eAtXxF3XZF3SvDysjCPW@gitlab.com/webandadmg/vs_chat_widget_front#lib-build"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  }
+}

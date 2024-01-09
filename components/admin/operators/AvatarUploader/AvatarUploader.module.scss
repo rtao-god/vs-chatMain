@@ -1,0 +1,49 @@
+.fileInput {
+  display: none;
+}
+
+.uploadButton {
+  @include destyle-button;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.preview {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: var(--color-bg-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+}
+
+.actionName {
+  @include text-size-body-2;
+  color: var(--color-accent);
+  text-decoration: underline;
+  margin-top: 8px;
+}
+
+.plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  position: absolute;
+  top: 85px;
+  right: 3px;
+}
+
+.plusIcon {
+  path {
+    stroke: var(--color-text-contrast);
+  }
+}

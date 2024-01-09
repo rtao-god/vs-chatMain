@@ -1,0 +1,98 @@
+@mixin media-xs {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin media-upto-xs {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media (min-width: 576px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin media-upto-sm {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media (min-width: 768px) and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin media-upto-md {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media (min-width: 992px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin media-upto-lg {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media (min-width: 1200px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin media-upto-xl {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin media-xxl {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin admin-page-paddings {
+  padding-left: 64px;
+  padding-right: 64px;
+
+  @include media-upto-md {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include media-upto-xs {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@mixin operator-page-paddings {
+  padding-left: 32px;
+  padding-right: 16px;
+
+  @include media-upto-md {
+    padding-left: 16px;
+  }
+}
+
+@mixin operator-page-paddings-important {
+  padding-left: 32px !important;
+  padding-right: 16px !important;
+
+  @include media-upto-md {
+    padding-left: 16px !important;
+  }
+}

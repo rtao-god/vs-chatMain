@@ -1,0 +1,27 @@
+@mixin outline-table-row {
+  border-radius: 4px;
+  border: 2px solid var(--color-accent-pale);
+  transition: border-color 0.2s;
+
+  &:hover {
+    border-color: var(--color-accent);
+  }
+}
+
+@mixin table-header-cell {
+  @include text-size-body-2;
+  color: var(--color-text-secondary);
+  padding: 8px 16px;
+}
+
+@mixin table-cell {
+  padding: 16px;
+}
+
+@mixin compact-table-header-row {
+  border-bottom: 1px solid var(--color-border-primary);
+}
+
+@mixin compact-table-row {
+  border-bottom: 1px solid var(--color-border-accent);
+}

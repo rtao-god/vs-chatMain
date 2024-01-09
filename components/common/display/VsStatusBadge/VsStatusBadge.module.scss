@@ -1,0 +1,33 @@
+.root {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  min-width: 78px;
+  width: fit-content;
+  height: 30px;
+  padding: 6px 8px;
+  box-sizing: border-box;
+}
+
+.rootInactive {
+  background-color: var(--color-bg-inactive);
+  color: var(--color-text-primary);
+}
+
+.rootActive {
+  background-color: var(--color-bg-active);
+  color: var(--color-text-active);
+}
+
+.rootProcessing {
+  background-color: var(--color-bg-warning);
+  color: var(--color-text-warning);
+}
+
+.name {
+  @include text-size-body-3;
+  text-align: center;
+  white-space: nowrap;
+}

@@ -1,0 +1,51 @@
+@mixin departments-table-row {
+  display: grid;
+  grid-template-columns: 600fr 316fr 396fr;
+}
+
+.tableHeader {
+  @include departments-table-row;
+  margin-bottom: 6px;
+}
+
+.tableHeaderCell {
+  @include table-header-cell;
+  min-width: 0;
+}
+
+.tableRow {
+  @include outline-table-row;
+  @include departments-table-row;
+
+  &:not(:last-child) {
+    margin-bottom: 4px;
+  }
+}
+
+.tableCell {
+  @include table-cell;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+}
+
+.tableCellName {
+  @include text-size-body-1;
+  font-weight: 600;
+}
+
+.departmentsWrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -8px;
+  margin-bottom: -8px;
+}
+
+.deparmentBadge {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.linkCell{
+  justify-content: flex-end;
+}

@@ -1,0 +1,14 @@
+.root {
+  display: inline-block;
+  padding: 6px 8px;
+  border-radius: 2px;
+  background-color: var(--color-bg-inactive);
+  width: fit-content;
+  @include text-size-body-2;
+  font-weight: 600;
+}
+
+.rootDanger {
+  background-color: var(--color-bg-danger);
+  color: var(--color-text-danger);
+}

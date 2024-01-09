@@ -1,0 +1,30 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 8px;
+  background-color: var(--color-bg-accent);
+  color: var(--color-accent);
+  border-radius: 2px;
+}
+
+.name {
+  @include text-size-body-2;
+  white-space: nowrap;
+}
+
+.count {
+  @include text-size-body-3;
+  font-weight: 600;
+  height: 20px;
+  min-width: 20px;
+  box-sizing: border-box;
+  padding: 1px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  border-radius: 10px;
+  background-color: var(--color-accent);
+  color: var(--color-text-contrast);
+  display: flex;
+}

@@ -1,0 +1,61 @@
+.root {
+  @include admin-page-paddings;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  @include text-size-h1;
+  margin: 0;
+
+  @include media-upto-md {
+    @include text-size-h2;
+  }
+}
+
+.content {
+  max-width: 426px;
+  width: 100%;
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+
+  @include media-upto-md {
+    padding-top: 80px;
+  }
+
+  @include media-upto-xs {
+    padding-top: 60px;
+  }
+}
+
+.emailInput {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.passwordInput {
+  margin-bottom: 32px;
+}
+
+.keepMeLoggedInCheckbox {
+  margin-bottom: 32px;
+}
+
+.submitButton {
+  width: 100%;
+  margin-bottom: 120px;
+
+  @include media-upto-md {
+    margin-bottom: 80px;
+  }
+
+  @include media-upto-xs {
+    margin-bottom: 60px;
+  }
+}
+
+.passwordResetLink {
+  margin: auto auto 24px;
+}

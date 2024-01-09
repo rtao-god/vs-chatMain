@@ -1,0 +1,28 @@
+.root {
+  overflow: hidden;
+}
+
+.content {
+  @include text-size-body-2;
+  color: var(--color-red);
+  height: 34px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 8px;
+  border-radius: 4px;
+  background-color: var(--color-bg-danger);
+  color: var(--color-text-danger);
+  transition: margin-top 0.3s, opacity 0.3s;
+  margin-top: -34px;
+  opacity: 0;
+}
+
+.contentShown {
+  margin-top: 0;
+  opacity: 1;
+}
+
+.icon {
+  margin-right: 8px;
+}

@@ -1,0 +1,87 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  @include text-size-body-2;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.input {
+  @include text-size-body-2;
+  color: var(--color-text-primary);
+  background-color: transparent;
+  padding: 10px 7px 10px 7px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 2px;
+  border: 1px solid var(--color-border-primary);
+  width: 100%;
+  box-sizing: border-box;
+  height: 44px;
+  outline: none;
+  transition: border-color 0.2s;
+
+  &:focus {
+    border-color: var(--color-accent);
+  }
+}
+
+.inputWithAddon {
+  padding: 10px 36px 10px 7px;
+}
+
+.inputWithError {
+  border-color: var(--color-border-danger);
+
+  &:focus {
+    border-color: var(--color-border-danger);
+  }
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.addonIcon {
+  height: 100%;
+  width: 28px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  padding-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorMessageWrap {
+  overflow: hidden;
+}
+
+.errorMessage {
+  @include text-size-body-3;
+  padding: 1px 4px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-bg-danger);
+  color: var(--color-text-danger);
+  box-sizing: border-box;
+  height: 18px;
+  margin-top: 2px;
+  transition: opacity 0.2s, margin-top 0.2s;
+  width: fit-content;
+}
+
+.errorMessageHidden {
+  opacity: 0;
+  margin-top: -18px;
+}
+
+.errorMessageIcon {
+  margin-right: 4px;
+}

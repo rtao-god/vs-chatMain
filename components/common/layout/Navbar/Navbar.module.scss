@@ -1,0 +1,25 @@
+.list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 40px;
+  width: fit-content;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.linkText {
+  @include text-size-h4;
+  color: var(--color-text-primary);
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.linkTextActive {
+  border-color: var(--color-accent);
+  cursor: default;
+}

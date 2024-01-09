@@ -1,0 +1,35 @@
+.root {
+  @include admin-page-paddings;
+  padding-top: 32px;
+  padding-bottom: 128px;
+  position: relative;
+}
+
+.back {
+  margin-bottom: 32px;
+}
+
+.section {
+  &:not(:last-child) {
+    margin-bottom: 80px;
+  }
+}
+
+.sectionHeader {
+  @include text-size-h4;
+  margin-bottom: 40px;
+}
+
+.personalInfo {
+  display: flex;
+}
+
+.actionsWrap {
+  position: relative;
+}
+
+.actions {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

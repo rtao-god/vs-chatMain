@@ -1,0 +1,70 @@
+.backdrop {
+  display: flex;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-bg-modal-backdrop);
+  justify-content: center;
+  align-items: center;
+  z-index: var(--z-index-modal);
+}
+
+.modal {
+  position: relative;
+  background-color: var(--color-bg-primary);
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  padding-top: 48px;
+  align-items: center;
+}
+
+.heading {
+  @include text-size-h2;
+  margin-bottom: 0px;
+}
+
+.bodyText {
+  @include text-size-body-2;
+  color: var(--color-text-secondary);
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
+.actionButtonContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.cancelButton {
+  background-color: var(--color-bg-primary);
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  width: 212px;
+
+  &:hover {
+    background-color: var(--color-bg-accent) !important;
+  }
+}
+
+.confirmButton {
+  background-color: var(--color-accent);
+  color: var(--color-text-contrast);
+  width: 212px;
+  margin-left: 16px;
+}
+
+.closeIcon {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  cursor: pointer;
+
+  &:hover path {
+    stroke: var(--color-accent);
+  }
+}

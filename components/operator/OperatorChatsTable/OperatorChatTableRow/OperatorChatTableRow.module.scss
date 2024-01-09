@@ -1,0 +1,45 @@
+@import '../mixins.scss';
+
+.row {
+  @include operator-chats-table-row;
+  @include outline-table-row;
+}
+
+.rowCell {
+  @include table-cell;
+  @include text-size-body-2;
+}
+
+.rowCellActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lastMessage {
+  max-height: 36px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lastMessageLoading {
+  opacity: 0.5;
+}
+
+.userName {
+  margin-left: 12px;
+  position: relative;
+  margin-bottom: 8px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: -12px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-gray);
+  }
+}

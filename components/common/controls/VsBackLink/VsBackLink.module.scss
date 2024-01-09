@@ -1,0 +1,28 @@
+.root {
+  @include text-size-body-2;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content;
+
+  &:hover {
+    .icon {
+      transform: translateX(-4px);
+    }
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.text {
+  margin-top: 1px;
+}
+
+.icon {
+  margin-right: 8px;
+  transition: transform 0.2s;
+}

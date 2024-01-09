@@ -1,0 +1,14 @@
+.root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  @include text-size-body-2;
+  color: var(--color-text-secondary);
+  height: 62px;
+  align-items: center;
+  text-align: center;
+  margin-top: auto;
+}

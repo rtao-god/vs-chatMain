@@ -1,0 +1,66 @@
+.root {
+  width: 100%;
+  max-width: 870px;
+}
+
+@mixin operator-departments-table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 70px;
+}
+
+.tableHeader {
+  @include operator-departments-table-row;
+  @include compact-table-header-row;
+}
+
+.tableHeaderCell {
+  @include table-header-cell;
+  min-width: 0;
+}
+
+.tableRow {
+  @include operator-departments-table-row;
+  @include compact-table-row;
+
+  &:not(:last-child) {
+    margin-bottom: 4px;
+  }
+}
+
+.tableCell {
+  @include table-cell;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+}
+
+.tableCellName {
+  @include text-size-body-1;
+  font-weight: 600;
+}
+
+.prioritySelect {
+  width: 100%;
+  max-width: 300px;
+}
+
+.deleteButton {
+  @include destyle-button;
+  display: flex;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+
+  &:hover {
+    .deleteButtonIcon path {
+      stroke: var(--color-text-danger);
+    }
+  }
+}
+
+.deleteButtonIcon {
+  path {
+    transition: stroke 0.2s;
+  }
+}

@@ -1,0 +1,28 @@
+.root {
+  @include text-size-body-2;
+  @include destyle-button;
+  font-weight: 500;
+  color: var(--color-accent);
+  text-decoration: none;
+
+  &:hover {
+    .icon {
+      transform: translateX(4px);
+    }
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.text {
+  margin-top: 1px;
+}
+
+.icon {
+  margin-left: 8px;
+  transition: transform 0.2s;
+}

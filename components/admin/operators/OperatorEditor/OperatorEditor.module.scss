@@ -1,0 +1,39 @@
+.root {
+  display: flex;
+  position: relative;
+}
+
+.photoSelectorWrap {
+  width: 120px;
+  margin-right: 100px;
+  flex-shrink: 0;
+}
+
+.fields {
+  flex-grow: 1;
+}
+
+.nameInput {
+  margin-bottom: 20px;
+  max-width: 316px;
+}
+
+.emailInput {
+  margin-bottom: 20px;
+  max-width: 316px;
+}
+
+.passwordInput {
+  margin-bottom: 40px;
+  max-width: 316px;
+}
+
+.departmentsSelect {
+  margin-bottom: 40px;
+}
+
+.deleteButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

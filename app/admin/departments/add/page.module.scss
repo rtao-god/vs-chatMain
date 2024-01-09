@@ -1,0 +1,33 @@
+.root {
+  @include admin-page-paddings;
+  padding-top: 32px;
+}
+
+.heading {
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+
+.textInputContainer {
+  margin-bottom: 40px;
+}
+
+.textInput {
+  width: 316px !important;
+}
+
+.formFooter {
+  width: 100%;
+  padding: 16px;
+  border-top: 1px solid var(--color-blue-light2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+}
+
+.saveButton {
+  width: 206px;
+}
